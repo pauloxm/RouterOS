@@ -1,0 +1,68 @@
+---
+  - hosts: routers
+    connection: network_cli
+    gather_facts: false
+  
+    vars:
+      ansible_network_os: routeros
+      ansible_user: admin
+      ansible_ssh_pass: admin
+    
+    tasks:
+
+      - name: "Renomeando Interfaces"
+        community.routeros.command: 
+          commands:
+            - /interface ethernet set name="01 - INTERNET" ether1
+            - /interface ethernet set name="02 - REDE LAN" ether2
+            - /interface ethernet set name="03 - REDE LAN" ether3
+            - /interface ethernet set name="04 - REDE LAN" ether4
+            - /interface ethernet set name="05 - REDE LAN" ether5
+
+      - name: "Criando Bridge LAN"
+        community.routeros.command: 
+          commands:
+            - /interface bridge add name="Bridge_LAN"
+
+      - name: "Adicionando interfaces à Bridge LAN"
+        community.routeros.command: 
+          commands:
+            - /interface bridge port add interface="02 - REDE LAN" bridge="Bridge_LAN"
+            - /interface bridge port add interface="03 - REDE LAN" bridge="Bridge_LAN"
+            - /interface bridge port add interface="04 - REDE LAN" bridge="Bridge_LAN"
+            - /interface bridge port add interface="05 - REDE LAN" bridge="Bridge_LAN"
+
+      - name: "Criando VLAN"
+        community.routeros.command: 
+          commands:
+            - /interface vlan add name="10 - VLAN Visitante" vlan-id=10 interface="Bridge_LAN"
+
+      - name: "Definindo IP da Bridge_LAN"
+        community.routeros.command: 
+          commands:
+            - /ip address add interface="Bridge_LAN" address=10.100.1.253/24
+
+      - name: "Definindo IP da VLAN Visitante"
+        community.routeros.command: 
+          commands:
+            - /ip address add interface="10 - VLAN Visitante" address=172.16.20.1/24
+        
+      - name: "Adicionando servidores DNS"
+        community.routeros.command: 
+          commands:
+            - /ip dns set servers=8.8.8.8,8.8.4.4,1.1.1.1
+
+      - name: "Habilitando Remote Request"
+        community.routeros.command: 
+          commands:
+            -  /ip dns set allow-remote-requests=yes
+
+      - name: "Criar pool de IPs - Bridge_LAN"
+        community.routeros.command: 
+          commands:
+            - /ip/pool/add name="Pool LAN" ranges=10.100.1.20-10.100.1.250
+
+      - name: "Criar pool de IPs - Bridge_LAN"
+        community.routeros.command: 
+          commands:
+            - /ip/pool/add name="Pool Visitante" ranges=172.16.20.20-172.16.20.250

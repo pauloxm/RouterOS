@@ -1,0 +1,28 @@
+---
+  - hosts: routers
+    connection: network_cli
+    gather_facts: false
+  
+    vars:
+      ansible_network_os: routeros
+      ansible_user: admin
+      ansible_ssh_pass: admin
+    
+    tasks:
+
+      - name: "NTP Client - Adicionando servidores"
+        community.routeros.command: 
+          commands:
+            - /system ntp client servers add address=a.ntp.br
+            - /system ntp client servers add address=b.ntp.br
+
+      - name: "NTP Client - Habilitando cliente"
+        community.routeros.command: 
+          commands:
+            - /system ntp client set enabled=yes
+
+      - name: "NTP Client - Ajustando configuração do relógio"
+        community.routeros.command: 
+          commands:
+            - /system clock set time-zone-name=America/Sao_Paulo
+            - /system clock set time-zone-autodetect=no

@@ -1,0 +1,26 @@
+---
+  - hosts: routers
+    connection: network_cli
+    gather_facts: false
+  
+    vars:
+      ansible_network_os: routeros
+      ansible_user: admin
+      ansible_ssh_pass: admin
+
+      support_user: suporte.paulo
+      support_password: pass1234
+      support_user_temp: suporte
+      support_password_temp: "1234"
+    
+    tasks:
+
+      - name: "Criando usuario de Suporte da Empresa"
+        community.routeros.command: 
+          commands:
+            - /user add name={{ support_user }} group=full password={{ support_password }}
+      
+      - name: "Criando usuario de Suporte temporario"
+        community.routeros.command: 
+          commands:
+            - /user add name={{ support_user_temp }} group=full password={{ support_password_temp }}
