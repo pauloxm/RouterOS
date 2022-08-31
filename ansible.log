@@ -1,0 +1,878 @@
+2022-08-28 18:56:54,059 p=48893 u=pauloxavier n=ansible | PLAY [mikrotik] **********************************************************************************************************************************************************************************
+2022-08-28 18:56:54,084 p=48893 u=pauloxavier n=ansible | TASK [interfaces : Criando Bridge LAN] ***********************************************************************************************************************************************************
+2022-08-28 18:56:55,081 p=48896 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-28 18:57:07,688 p=48893 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 18:57:07,698 p=48893 u=pauloxavier n=ansible | TASK [interfaces : Adicionando interfaces à Bridge LAN] ******************************************************************************************************************************************
+2022-08-28 18:57:09,904 p=48893 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'})
+2022-08-28 18:57:11,225 p=48893 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 18:57:12,653 p=48893 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 18:57:13,979 p=48893 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 18:57:15,314 p=48893 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 18:57:16,689 p=48893 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'Bridge_LAN', 'desc': 'Bridge_LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'})
+2022-08-28 18:57:16,719 p=48893 u=pauloxavier n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2022-08-28 18:57:16,719 p=48893 u=pauloxavier n=ansible | routeros-01                : ok=2    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-28 18:57:16,818 p=48912 u=pauloxavier n=ansible | shutdown complete
+2022-08-28 19:07:58,688 p=49472 u=pauloxavier n=ansible | PLAY [mikrotik] **********************************************************************************************************************************************************************************
+2022-08-28 19:07:58,720 p=49472 u=pauloxavier n=ansible | TASK [interfaces : Criando Bridge LAN] ***********************************************************************************************************************************************************
+2022-08-28 19:07:59,447 p=49476 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-28 19:08:11,845 p=49472 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 19:08:11,853 p=49472 u=pauloxavier n=ansible | TASK [interfaces : Adicionando interfaces à Bridge LAN] ******************************************************************************************************************************************
+2022-08-28 19:08:13,740 p=49472 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'})
+2022-08-28 19:08:14,955 p=49472 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 19:08:16,178 p=49472 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 19:08:17,685 p=49472 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 19:08:18,934 p=49472 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 19:08:20,159 p=49472 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'Bridge_LAN', 'desc': 'Bridge_LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'})
+2022-08-28 19:08:20,177 p=49472 u=pauloxavier n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2022-08-28 19:08:20,179 p=49472 u=pauloxavier n=ansible | routeros-01                : ok=2    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-28 19:08:20,274 p=49492 u=pauloxavier n=ansible | shutdown complete
+2022-08-28 19:08:29,729 p=49763 u=pauloxavier n=ansible | PLAY [mikrotik] **********************************************************************************************************************************************************************************
+2022-08-28 19:08:29,757 p=49763 u=pauloxavier n=ansible | TASK [interfaces : Adicionando interfaces à Bridge LAN] ******************************************************************************************************************************************
+2022-08-28 19:08:30,546 p=49767 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-28 19:08:42,992 p=49763 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'})
+2022-08-28 19:08:44,994 p=49763 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 19:08:46,314 p=49763 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 19:08:47,749 p=49763 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 19:08:49,159 p=49763 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 19:08:50,506 p=49763 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'Bridge_LAN', 'desc': 'Bridge_LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'})
+2022-08-28 19:08:50,519 p=49763 u=pauloxavier n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2022-08-28 19:08:50,519 p=49763 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-28 19:09:20,466 p=49783 u=pauloxavier n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-08-28 19:09:20,575 p=49783 u=pauloxavier n=ansible | shutdown complete
+2022-08-28 19:09:53,629 p=50062 u=pauloxavier n=ansible | PLAY [mikrotik] **********************************************************************************************************************************************************************************
+2022-08-28 19:09:53,656 p=50062 u=pauloxavier n=ansible | TASK [interfaces : Adicionando interfaces à Bridge LAN] ******************************************************************************************************************************************
+2022-08-28 19:09:54,455 p=50066 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-28 19:10:06,927 p=50062 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'})
+2022-08-28 19:10:08,787 p=50062 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 19:10:10,024 p=50062 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 19:10:11,252 p=50062 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 19:10:12,491 p=50062 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 19:10:13,727 p=50062 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'Bridge_LAN', 'desc': 'Bridge_LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'})
+2022-08-28 19:10:13,750 p=50062 u=pauloxavier n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2022-08-28 19:10:13,751 p=50062 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-28 19:10:43,684 p=50081 u=pauloxavier n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-08-28 19:10:43,786 p=50081 u=pauloxavier n=ansible | shutdown complete
+2022-08-28 19:10:44,765 p=50334 u=pauloxavier n=ansible | PLAY [mikrotik] **********************************************************************************************************************************************************************************
+2022-08-28 19:10:44,793 p=50334 u=pauloxavier n=ansible | TASK [interfaces : Adicionando interfaces à Bridge LAN] ******************************************************************************************************************************************
+2022-08-28 19:10:45,547 p=50339 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-28 19:10:57,900 p=50334 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'})
+2022-08-28 19:10:59,716 p=50334 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 19:11:00,953 p=50334 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 19:11:02,229 p=50334 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 19:11:03,451 p=50334 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 19:11:04,668 p=50334 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'Bridge_LAN', 'desc': 'Bridge_LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'})
+2022-08-28 19:11:04,688 p=50334 u=pauloxavier n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2022-08-28 19:11:04,689 p=50334 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-28 19:11:34,628 p=50356 u=pauloxavier n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-08-28 19:11:34,731 p=50356 u=pauloxavier n=ansible | shutdown complete
+2022-08-28 19:13:04,935 p=50631 u=pauloxavier n=ansible | PLAY [mikrotik] **********************************************************************************************************************************************************************************
+2022-08-28 19:13:04,961 p=50631 u=pauloxavier n=ansible | TASK [interfaces : Adicionando interfaces à Bridge LAN] ******************************************************************************************************************************************
+2022-08-28 19:13:05,717 p=50635 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-28 19:13:21,978 p=50631 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 19:13:22,004 p=50631 u=pauloxavier n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2022-08-28 19:13:22,005 p=50631 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-28 19:13:22,100 p=50652 u=pauloxavier n=ansible | shutdown complete
+2022-08-28 19:47:28,064 p=51736 u=pauloxavier n=ansible | PLAY [mikrotik] **********************************************************************************************************************************************************************************
+2022-08-28 19:47:28,096 p=51736 u=pauloxavier n=ansible | TASK [system : Configura hostname] ***************************************************************************************************************************************************************
+2022-08-28 19:47:28,918 p=51739 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-28 19:47:41,523 p=51736 u=pauloxavier n=ansible | ok: [routeros-01]
+2022-08-28 19:47:41,531 p=51736 u=pauloxavier n=ansible | TASK [interfaces : Criando Bridge LAN] ***********************************************************************************************************************************************************
+2022-08-28 19:47:43,523 p=51736 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 19:47:43,531 p=51736 u=pauloxavier n=ansible | TASK [interfaces : Adicionando interfaces à Bridge LAN] ******************************************************************************************************************************************
+2022-08-28 19:47:46,305 p=51736 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 19:47:46,316 p=51736 u=pauloxavier n=ansible | TASK [interfaces : Configura VLANs] **************************************************************************************************************************************************************
+2022-08-28 19:47:48,298 p=51736 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'name': 'Visitante', 'vlan_id': 10, 'interface': 'Bridge_LAN'})
+2022-08-28 19:47:48,312 p=51736 u=pauloxavier n=ansible | TASK [interfaces : Configura interfaces] *********************************************************************************************************************************************************
+2022-08-28 19:47:50,390 p=51736 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'})
+2022-08-28 19:47:51,673 p=51736 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 19:47:52,886 p=51736 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 19:47:54,148 p=51736 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 19:47:55,351 p=51736 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-28 19:47:56,563 p=51736 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'Bridge_LAN', 'desc': 'Bridge_LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'})
+2022-08-28 19:47:56,570 p=51736 u=pauloxavier n=ansible | TASK [interfaces : Configura endereços IPv4 - Estático] ******************************************************************************************************************************************
+2022-08-28 19:47:56,623 p=51736 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'}) 
+2022-08-28 19:47:56,632 p=51736 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': 'REDE LAN', 'enabled': True}) 
+2022-08-28 19:47:56,646 p=51736 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': 'REDE LAN', 'enabled': True}) 
+2022-08-28 19:47:56,656 p=51736 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': 'REDE LAN', 'enabled': True}) 
+2022-08-28 19:47:56,668 p=51736 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': 'REDE LAN', 'enabled': True}) 
+2022-08-28 19:47:58,355 p=51736 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'Bridge_LAN', 'desc': 'Bridge_LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'})
+2022-08-28 19:47:58,361 p=51736 u=pauloxavier n=ansible | TASK [interfaces : Configura endereços IPv4 - DHCP] **********************************************************************************************************************************************
+2022-08-28 19:48:00,082 p=51736 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'})
+2022-08-28 19:48:00,089 p=51736 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': 'REDE LAN', 'enabled': True}) 
+2022-08-28 19:48:00,101 p=51736 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': 'REDE LAN', 'enabled': True}) 
+2022-08-28 19:48:00,117 p=51736 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': 'REDE LAN', 'enabled': True}) 
+2022-08-28 19:48:00,137 p=51736 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': 'REDE LAN', 'enabled': True}) 
+2022-08-28 19:48:00,145 p=51736 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'Bridge_LAN', 'desc': 'Bridge_LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'}) 
+2022-08-28 19:48:00,154 p=51736 u=pauloxavier n=ansible | TASK [interfaces : Limpeza de interfaces com falha] **********************************************************************************************************************************************
+2022-08-28 19:48:01,944 p=51736 u=pauloxavier n=ansible | ok: [routeros-01]
+2022-08-28 19:48:01,953 p=51736 u=pauloxavier n=ansible | TASK [firewall : Criar interface List usada no Firewall] *****************************************************************************************************************************************
+2022-08-28 19:48:03,954 p=51736 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 19:48:03,966 p=51736 u=pauloxavier n=ansible | TASK [firewall : Layer7] *************************************************************************************************************************************************************************
+2022-08-28 19:48:06,093 p=51736 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 19:48:06,099 p=51736 u=pauloxavier n=ansible | TASK [firewall : Ajuste de Timeout] **************************************************************************************************************************************************************
+2022-08-28 19:48:07,849 p=51736 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 19:48:07,857 p=51736 u=pauloxavier n=ansible | TASK [firewall : Filter INPUT] *******************************************************************************************************************************************************************
+2022-08-28 19:48:20,503 p=51736 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 19:48:20,509 p=51736 u=pauloxavier n=ansible | TASK [snmp : Configura SNMPv2] *******************************************************************************************************************************************************************
+2022-08-28 19:48:23,807 p=51736 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 19:48:23,819 p=51736 u=pauloxavier n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2022-08-28 19:48:23,819 p=51736 u=pauloxavier n=ansible | routeros-01                : ok=13   changed=8    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-28 19:48:23,919 p=51756 u=pauloxavier n=ansible | shutdown complete
+2022-08-28 20:18:48,546 p=52876 u=pauloxavier n=ansible | PLAY [mikrotik] ***********************************************************************************************************************************************************************************************
+2022-08-28 20:18:48,577 p=52876 u=pauloxavier n=ansible | PLAY RECAP ****************************************************************************************************************************************************************************************************
+2022-08-28 20:20:29,440 p=52947 u=pauloxavier n=ansible | PLAY [mikrotik] ***********************************************************************************************************************************************************************************************
+2022-08-28 20:20:29,468 p=52947 u=pauloxavier n=ansible | PLAY RECAP ****************************************************************************************************************************************************************************************************
+2022-08-28 20:20:39,832 p=52984 u=pauloxavier n=ansible | PLAY [mikrotik] ***********************************************************************************************************************************************************************************************
+2022-08-28 20:20:39,856 p=52984 u=pauloxavier n=ansible | TASK [firewall : Criar interface List usada no Firewall] ******************************************************************************************************************************************************
+2022-08-28 20:20:40,555 p=52987 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-28 20:20:53,215 p=52984 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 20:20:53,225 p=52984 u=pauloxavier n=ansible | TASK [firewall : Layer7] **************************************************************************************************************************************************************************************
+2022-08-28 20:20:55,309 p=52984 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 20:20:55,323 p=52984 u=pauloxavier n=ansible | TASK [firewall : Ajuste de Timeout] ***************************************************************************************************************************************************************************
+2022-08-28 20:20:57,242 p=52984 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 20:20:57,253 p=52984 u=pauloxavier n=ansible | TASK [firewall : Filter INPUT] ********************************************************************************************************************************************************************************
+2022-08-28 20:21:08,254 p=52984 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 20:21:08,271 p=52984 u=pauloxavier n=ansible | PLAY RECAP ****************************************************************************************************************************************************************************************************
+2022-08-28 20:21:08,273 p=52984 u=pauloxavier n=ansible | routeros-01                : ok=4    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-28 20:21:08,371 p=53003 u=pauloxavier n=ansible | shutdown complete
+2022-08-28 20:27:10,901 p=53372 u=pauloxavier n=ansible | PLAY [mikrotik] ***********************************************************************************************************************************************************************************************
+2022-08-28 20:27:10,933 p=53372 u=pauloxavier n=ansible | TASK [firewall : Criar interface List usada no Firewall] ******************************************************************************************************************************************************
+2022-08-28 20:27:11,653 p=53376 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-28 20:27:24,395 p=53372 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 20:27:24,401 p=53372 u=pauloxavier n=ansible | TASK [firewall : Layer7] **************************************************************************************************************************************************************************************
+2022-08-28 20:27:26,403 p=53372 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 20:27:26,410 p=53372 u=pauloxavier n=ansible | TASK [firewall : Ajuste de Timeout] ***************************************************************************************************************************************************************************
+2022-08-28 20:27:28,210 p=53372 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 20:27:28,217 p=53372 u=pauloxavier n=ansible | TASK [firewall : Filter INPUT] ********************************************************************************************************************************************************************************
+2022-08-28 20:27:38,477 p=53372 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 20:27:38,498 p=53372 u=pauloxavier n=ansible | PLAY RECAP ****************************************************************************************************************************************************************************************************
+2022-08-28 20:27:38,498 p=53372 u=pauloxavier n=ansible | routeros-01                : ok=4    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-28 20:27:38,597 p=53396 u=pauloxavier n=ansible | shutdown complete
+2022-08-28 20:42:00,147 p=53926 u=pauloxavier n=ansible | PLAY [mikrotik] ***********************************************************************************************************************************************************************************************
+2022-08-28 20:42:00,175 p=53926 u=pauloxavier n=ansible | TASK [firewall : Criar interface List usada no Firewall] ******************************************************************************************************************************************************
+2022-08-28 20:42:00,915 p=53933 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-28 20:42:13,731 p=53926 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 20:42:13,736 p=53926 u=pauloxavier n=ansible | TASK [firewall : Layer7] **************************************************************************************************************************************************************************************
+2022-08-28 20:42:15,846 p=53926 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 20:42:15,855 p=53926 u=pauloxavier n=ansible | TASK [firewall : Ajuste de Timeout] ***************************************************************************************************************************************************************************
+2022-08-28 20:42:18,144 p=53926 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 20:42:18,158 p=53926 u=pauloxavier n=ansible | PLAY RECAP ****************************************************************************************************************************************************************************************************
+2022-08-28 20:42:18,159 p=53926 u=pauloxavier n=ansible | routeros-01                : ok=3    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-28 20:42:18,258 p=53950 u=pauloxavier n=ansible | shutdown complete
+2022-08-28 20:54:06,299 p=54340 u=pauloxavier n=ansible | PLAY [mikrotik] ***********************************************************************************************************************************************************************************************
+2022-08-28 20:54:06,328 p=54340 u=pauloxavier n=ansible | TASK [firewall : Criar interface List usada no Firewall] ******************************************************************************************************************************************************
+2022-08-28 20:54:06,909 p=54351 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-28 20:54:19,556 p=54340 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 20:54:19,568 p=54340 u=pauloxavier n=ansible | TASK [firewall : Layer7] **************************************************************************************************************************************************************************************
+2022-08-28 20:54:21,603 p=54340 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 20:54:21,610 p=54340 u=pauloxavier n=ansible | TASK [firewall : Ajuste de Timeout] ***************************************************************************************************************************************************************************
+2022-08-28 20:54:23,590 p=54340 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 20:54:23,610 p=54340 u=pauloxavier n=ansible | TASK [firewall : Limpando regras] *****************************************************************************************************************************************************************************
+2022-08-28 20:54:25,359 p=54340 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 20:54:25,379 p=54340 u=pauloxavier n=ansible | TASK [firewall : Regras de INPUT] *****************************************************************************************************************************************************************************
+2022-08-28 20:54:34,155 p=54340 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 20:54:34,188 p=54340 u=pauloxavier n=ansible | PLAY RECAP ****************************************************************************************************************************************************************************************************
+2022-08-28 20:54:34,189 p=54340 u=pauloxavier n=ansible | routeros-01                : ok=5    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-28 20:54:34,286 p=54362 u=pauloxavier n=ansible | shutdown complete
+2022-08-28 20:54:45,059 p=54613 u=pauloxavier n=ansible | PLAY [mikrotik] ***********************************************************************************************************************************************************************************************
+2022-08-28 20:54:45,084 p=54613 u=pauloxavier n=ansible | TASK [firewall : Criar interface List usada no Firewall] ******************************************************************************************************************************************************
+2022-08-28 20:54:45,682 p=54616 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-28 20:54:58,236 p=54613 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 20:54:58,251 p=54613 u=pauloxavier n=ansible | TASK [firewall : Layer7] **************************************************************************************************************************************************************************************
+2022-08-28 20:55:00,193 p=54613 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 20:55:00,207 p=54613 u=pauloxavier n=ansible | TASK [firewall : Ajuste de Timeout] ***************************************************************************************************************************************************************************
+2022-08-28 20:55:01,951 p=54613 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 20:55:01,967 p=54613 u=pauloxavier n=ansible | TASK [firewall : Limpando regras] *****************************************************************************************************************************************************************************
+2022-08-28 20:55:05,927 p=54613 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 20:55:05,942 p=54613 u=pauloxavier n=ansible | TASK [firewall : Regras de INPUT] *****************************************************************************************************************************************************************************
+2022-08-28 20:55:18,981 p=54613 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-28 20:55:19,011 p=54613 u=pauloxavier n=ansible | PLAY RECAP ****************************************************************************************************************************************************************************************************
+2022-08-28 20:55:19,012 p=54613 u=pauloxavier n=ansible | routeros-01                : ok=5    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-28 20:55:19,110 p=54632 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 19:56:48,880 p=5422 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 19:56:48,915 p=5422 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 19:57:25,626 p=5473 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 19:57:25,652 p=5473 u=pauloxavier n=ansible | TASK [interfaces : Criar interface List WAN] ****************************************************************************************************************************************************
+2022-08-30 19:57:26,283 p=5477 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 19:57:52,644 p=5473 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 19:57:52,650 p=5473 u=pauloxavier n=ansible | TASK [interfaces : Criar interface List LAN] ****************************************************************************************************************************************************
+2022-08-30 19:57:55,204 p=5473 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 19:57:55,210 p=5473 u=pauloxavier n=ansible | TASK [interfaces : Criando Bridge LAN] **********************************************************************************************************************************************************
+2022-08-30 19:57:56,987 p=5473 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 19:57:56,994 p=5473 u=pauloxavier n=ansible | TASK [interfaces : Adicionando interfaces à Bridge LAN] *****************************************************************************************************************************************
+2022-08-30 19:57:58,830 p=5473 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 19:57:58,836 p=5473 u=pauloxavier n=ansible | TASK [interfaces : Configura VLANs] *************************************************************************************************************************************************************
+2022-08-30 19:58:00,637 p=5473 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'name': 'Visitante', 'vlan_id': 10, 'interface': 'Bridge_LAN'})
+2022-08-30 19:58:00,644 p=5473 u=pauloxavier n=ansible | TASK [interfaces : Configura interfaces] ********************************************************************************************************************************************************
+2022-08-30 19:58:02,597 p=5473 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'})
+2022-08-30 19:58:03,837 p=5473 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-30 19:58:05,042 p=5473 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-30 19:58:06,246 p=5473 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-30 19:58:07,444 p=5473 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': 'REDE LAN', 'enabled': True})
+2022-08-30 19:58:08,637 p=5473 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'Bridge_LAN', 'desc': 'Bridge_LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'})
+2022-08-30 19:58:08,643 p=5473 u=pauloxavier n=ansible | TASK [interfaces : Configura endereços IPv4 - Estático] *****************************************************************************************************************************************
+2022-08-30 19:58:08,713 p=5473 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'}) 
+2022-08-30 19:58:08,723 p=5473 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': 'REDE LAN', 'enabled': True}) 
+2022-08-30 19:58:08,727 p=5473 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': 'REDE LAN', 'enabled': True}) 
+2022-08-30 19:58:08,733 p=5473 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': 'REDE LAN', 'enabled': True}) 
+2022-08-30 19:58:08,744 p=5473 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': 'REDE LAN', 'enabled': True}) 
+2022-08-30 19:58:10,507 p=5473 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'Bridge_LAN', 'desc': 'Bridge_LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'})
+2022-08-30 19:58:10,513 p=5473 u=pauloxavier n=ansible | TASK [interfaces : Configura endereços IPv4 - DHCP] *********************************************************************************************************************************************
+2022-08-30 19:58:12,251 p=5473 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'})
+2022-08-30 19:58:12,259 p=5473 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': 'REDE LAN', 'enabled': True}) 
+2022-08-30 19:58:12,268 p=5473 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': 'REDE LAN', 'enabled': True}) 
+2022-08-30 19:58:12,285 p=5473 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': 'REDE LAN', 'enabled': True}) 
+2022-08-30 19:58:12,292 p=5473 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': 'REDE LAN', 'enabled': True}) 
+2022-08-30 19:58:12,302 p=5473 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'Bridge_LAN', 'desc': 'Bridge_LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'}) 
+2022-08-30 19:58:12,310 p=5473 u=pauloxavier n=ansible | TASK [interfaces : Limpeza de interfaces com falha] *********************************************************************************************************************************************
+2022-08-30 19:58:14,045 p=5473 u=pauloxavier n=ansible | ok: [routeros-01]
+2022-08-30 19:58:14,057 p=5473 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 19:58:14,058 p=5473 u=pauloxavier n=ansible | routeros-01                : ok=9    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 19:58:14,157 p=5493 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:03:55,718 p=6071 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:03:55,745 p=6071 u=pauloxavier n=ansible | TASK [interfaces : Criar interface List WAN] ****************************************************************************************************************************************************
+2022-08-30 20:03:56,351 p=6075 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:04:08,933 p=6071 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 20:04:08,940 p=6071 u=pauloxavier n=ansible | TASK [interfaces : Criar interface List LAN] ****************************************************************************************************************************************************
+2022-08-30 20:04:11,911 p=6071 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 20:04:11,919 p=6071 u=pauloxavier n=ansible | TASK [interfaces : Criando Bridge LAN] **********************************************************************************************************************************************************
+2022-08-30 20:04:13,653 p=6071 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 20:04:13,660 p=6071 u=pauloxavier n=ansible | TASK [interfaces : Adicionando interfaces à Bridge LAN] *****************************************************************************************************************************************
+2022-08-30 20:04:15,357 p=6071 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 20:04:15,364 p=6071 u=pauloxavier n=ansible | TASK [interfaces : Configura VLANs] *************************************************************************************************************************************************************
+2022-08-30 20:04:17,070 p=6071 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'name': 'Visitante', 'vlan_id': 10, 'interface': 'Bridge_LAN'})
+2022-08-30 20:04:17,077 p=6071 u=pauloxavier n=ansible | TASK [interfaces : Configura interfaces] ********************************************************************************************************************************************************
+2022-08-30 20:04:18,983 p=6071 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'})
+2022-08-30 20:04:20,255 p=6071 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': '02 - REDE LAN', 'enabled': True})
+2022-08-30 20:04:21,476 p=6071 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': '03 - REDE LAN', 'enabled': True})
+2022-08-30 20:04:22,884 p=6071 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': '04 - REDE LAN', 'enabled': True})
+2022-08-30 20:04:24,083 p=6071 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': '05 - REDE LAN', 'enabled': True})
+2022-08-30 20:04:25,285 p=6071 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'Bridge_LAN', 'desc': 'Bridge_LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'})
+2022-08-30 20:04:25,292 p=6071 u=pauloxavier n=ansible | TASK [interfaces : Configura endereços IPv4 - Estático] *****************************************************************************************************************************************
+2022-08-30 20:04:25,377 p=6071 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'}) 
+2022-08-30 20:04:25,380 p=6071 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': '02 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:04:25,381 p=6071 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': '03 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:04:25,384 p=6071 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': '04 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:04:25,394 p=6071 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': '05 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:04:27,138 p=6071 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'Bridge_LAN', 'desc': 'Bridge_LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'})
+2022-08-30 20:04:27,145 p=6071 u=pauloxavier n=ansible | TASK [interfaces : Configura endereços IPv4 - DHCP] *********************************************************************************************************************************************
+2022-08-30 20:04:28,902 p=6071 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'})
+2022-08-30 20:04:28,909 p=6071 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': '02 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:04:28,919 p=6071 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': '03 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:04:28,926 p=6071 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': '04 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:04:28,940 p=6071 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': '05 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:04:28,948 p=6071 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'Bridge_LAN', 'desc': 'Bridge_LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'}) 
+2022-08-30 20:04:28,958 p=6071 u=pauloxavier n=ansible | TASK [interfaces : Limpeza de interfaces com falha] *********************************************************************************************************************************************
+2022-08-30 20:04:30,673 p=6071 u=pauloxavier n=ansible | ok: [routeros-01]
+2022-08-30 20:04:30,686 p=6071 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:04:30,686 p=6071 u=pauloxavier n=ansible | routeros-01                : ok=9    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:04:30,785 p=6091 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:04:49,453 p=6602 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:04:49,481 p=6602 u=pauloxavier n=ansible | TASK [interfaces : Criar interface List WAN] ****************************************************************************************************************************************************
+2022-08-30 20:04:50,137 p=6606 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:05:02,659 p=6602 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 20:05:02,665 p=6602 u=pauloxavier n=ansible | TASK [interfaces : Criar interface List LAN] ****************************************************************************************************************************************************
+2022-08-30 20:05:08,703 p=6602 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 20:05:08,717 p=6602 u=pauloxavier n=ansible | TASK [interfaces : Criando Bridge LAN] **********************************************************************************************************************************************************
+2022-08-30 20:05:10,453 p=6602 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 20:05:10,460 p=6602 u=pauloxavier n=ansible | TASK [interfaces : Adicionando interfaces à Bridge LAN] *****************************************************************************************************************************************
+2022-08-30 20:05:12,166 p=6602 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 20:05:12,172 p=6602 u=pauloxavier n=ansible | TASK [interfaces : Configura VLANs] *************************************************************************************************************************************************************
+2022-08-30 20:05:13,910 p=6602 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'name': 'Visitante', 'vlan_id': 10, 'interface': 'Bridge_LAN'})
+2022-08-30 20:05:13,916 p=6602 u=pauloxavier n=ansible | TASK [interfaces : Configura interfaces] ********************************************************************************************************************************************************
+2022-08-30 20:05:15,826 p=6602 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'})
+2022-08-30 20:05:17,123 p=6602 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': '02 - REDE LAN', 'enabled': True})
+2022-08-30 20:05:18,316 p=6602 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': '03 - REDE LAN', 'enabled': True})
+2022-08-30 20:05:19,533 p=6602 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': '04 - REDE LAN', 'enabled': True})
+2022-08-30 20:05:20,969 p=6602 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': '05 - REDE LAN', 'enabled': True})
+2022-08-30 20:05:22,167 p=6602 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'Bridge_LAN', 'desc': 'Bridge_LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'})
+2022-08-30 20:05:22,173 p=6602 u=pauloxavier n=ansible | TASK [interfaces : Configura endereços IPv4 - Estático] *****************************************************************************************************************************************
+2022-08-30 20:05:22,233 p=6602 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'}) 
+2022-08-30 20:05:22,244 p=6602 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': '02 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:05:22,258 p=6602 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': '03 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:05:22,274 p=6602 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': '04 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:05:22,283 p=6602 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': '05 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:05:24,008 p=6602 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'Bridge_LAN', 'desc': 'Bridge_LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'})
+2022-08-30 20:05:24,014 p=6602 u=pauloxavier n=ansible | TASK [interfaces : Configura endereços IPv4 - DHCP] *********************************************************************************************************************************************
+2022-08-30 20:05:25,755 p=6602 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'})
+2022-08-30 20:05:25,772 p=6602 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': '02 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:05:25,780 p=6602 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': '03 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:05:25,798 p=6602 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': '04 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:05:25,800 p=6602 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': '05 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:05:25,822 p=6602 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'Bridge_LAN', 'desc': 'Bridge_LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'}) 
+2022-08-30 20:05:25,832 p=6602 u=pauloxavier n=ansible | TASK [interfaces : Limpeza de interfaces com falha] *********************************************************************************************************************************************
+2022-08-30 20:05:27,594 p=6602 u=pauloxavier n=ansible | ok: [routeros-01]
+2022-08-30 20:05:27,608 p=6602 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:05:27,608 p=6602 u=pauloxavier n=ansible | routeros-01                : ok=9    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:05:27,711 p=6622 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:11:08,328 p=7279 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:11:08,358 p=7279 u=pauloxavier n=ansible | TASK [interfaces : Criar interface List WAN] ****************************************************************************************************************************************************
+2022-08-30 20:11:08,957 p=7283 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:11:24,820 p=7279 u=pauloxavier n=ansible |  [ERROR]: User interrupted execution
+
+2022-08-30 20:11:29,317 p=7299 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:11:41,629 p=7394 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:11:41,654 p=7394 u=pauloxavier n=ansible | TASK [interfaces : Criar interface List WAN] ****************************************************************************************************************************************************
+2022-08-30 20:11:42,252 p=7397 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:11:54,758 p=7394 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 20:11:54,769 p=7394 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:11:54,770 p=7394 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:11:54,869 p=7413 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:12:12,603 p=7515 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:12:12,639 p=7515 u=pauloxavier n=ansible | TASK [interfaces : Criar interface List LAN] ****************************************************************************************************************************************************
+2022-08-30 20:12:13,324 p=7519 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:12:25,840 p=7515 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'})
+2022-08-30 20:12:27,713 p=7515 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': '02 - REDE LAN', 'enabled': True})
+2022-08-30 20:12:29,170 p=7515 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': '03 - REDE LAN', 'enabled': True})
+2022-08-30 20:12:30,580 p=7515 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': '04 - REDE LAN', 'enabled': True})
+2022-08-30 20:12:32,003 p=7515 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': '05 - REDE LAN', 'enabled': True})
+2022-08-30 20:12:33,398 p=7515 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'routeros_if': 'Bridge_LAN', 'desc': 'Bridge_LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'})
+2022-08-30 20:12:33,414 p=7515 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:12:33,415 p=7515 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:13:03,369 p=7535 u=pauloxavier n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-08-30 20:13:03,477 p=7535 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:14:59,504 p=7809 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:14:59,530 p=7809 u=pauloxavier n=ansible | TASK [interfaces : Criar interface List WAN] ****************************************************************************************************************************************************
+2022-08-30 20:15:00,138 p=7813 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:15:12,716 p=7809 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 20:15:12,729 p=7809 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:15:12,729 p=7809 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:15:12,828 p=7829 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:16:11,784 p=7946 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:16:11,811 p=7946 u=pauloxavier n=ansible | TASK [interfaces : Criar interface List LAN] ****************************************************************************************************************************************************
+2022-08-30 20:16:12,401 p=7953 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:16:25,648 p=7946 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 20:16:25,659 p=7946 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:16:25,660 p=7946 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:16:25,759 p=7969 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:16:47,377 p=8081 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:16:47,405 p=8081 u=pauloxavier n=ansible | TASK [interfaces : Criando Bridge LAN] **********************************************************************************************************************************************************
+2022-08-30 20:16:47,998 p=8088 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:17:00,480 p=8081 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 20:17:00,517 p=8081 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:17:00,517 p=8081 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:17:00,600 p=8104 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:17:18,533 p=8227 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:17:18,556 p=8227 u=pauloxavier n=ansible | TASK [interfaces : Adicionando interfaces à Bridge LAN] *****************************************************************************************************************************************
+2022-08-30 20:17:19,145 p=8234 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:17:31,428 p=8227 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 20:17:31,439 p=8227 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:17:31,439 p=8227 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:17:31,538 p=8250 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:18:05,654 p=8382 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:18:05,678 p=8382 u=pauloxavier n=ansible | TASK [interfaces : Adicionando interfaces à Bridge LAN] *****************************************************************************************************************************************
+2022-08-30 20:18:06,269 p=8386 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:18:21,640 p=8382 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 20:18:21,650 p=8382 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:18:21,650 p=8382 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:18:21,751 p=8402 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:19:11,373 p=8585 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:19:11,402 p=8585 u=pauloxavier n=ansible | TASK [interfaces : Configura VLANs] *************************************************************************************************************************************************************
+2022-08-30 20:19:12,017 p=8589 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:19:24,351 p=8585 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'name': 'Visitante', 'vlan_id': 10, 'interface': 'Bridge_LAN'})
+2022-08-30 20:19:24,364 p=8585 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:19:24,364 p=8585 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:19:52,567 p=8714 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:19:52,591 p=8714 u=pauloxavier n=ansible | TASK [interfaces : Configura VLANs] *************************************************************************************************************************************************************
+2022-08-30 20:19:53,300 p=8718 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:19:54,317 p=8605 u=pauloxavier n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-08-30 20:19:54,418 p=8605 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:20:05,618 p=8714 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'name': 'Visitante', 'vlan_id': 10, 'interface': 'Bridge_LAN'})
+2022-08-30 20:20:05,640 p=8714 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:20:05,641 p=8714 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:20:35,567 p=8734 u=pauloxavier n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-08-30 20:20:35,669 p=8734 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:21:14,049 p=8848 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:21:14,075 p=8848 u=pauloxavier n=ansible | TASK [interfaces : Configura VLANs] *************************************************************************************************************************************************************
+2022-08-30 20:21:14,680 p=8852 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:21:27,249 p=8848 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'name': 'Visitante', 'vlan_id': 10, 'interface': 'Bridge LAN'})
+2022-08-30 20:21:27,261 p=8848 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:21:27,261 p=8848 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:21:47,011 p=8985 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:21:47,033 p=8985 u=pauloxavier n=ansible | TASK [interfaces : Configura interfaces] ********************************************************************************************************************************************************
+2022-08-30 20:21:47,685 p=8989 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:21:57,216 p=8868 u=pauloxavier n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-08-30 20:21:57,317 p=8868 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:22:00,065 p=8985 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'})
+2022-08-30 20:22:01,718 p=8985 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': '02 - REDE LAN', 'enabled': True})
+2022-08-30 20:22:02,964 p=8985 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': '03 - REDE LAN', 'enabled': True})
+2022-08-30 20:22:04,143 p=8985 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': '04 - REDE LAN', 'enabled': True})
+2022-08-30 20:22:05,323 p=8985 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': '05 - REDE LAN', 'enabled': True})
+2022-08-30 20:22:06,570 p=8985 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'Bridge LAN', 'desc': 'Bridge LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'})
+2022-08-30 20:22:06,584 p=8985 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:22:06,584 p=8985 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:22:36,540 p=9005 u=pauloxavier n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-08-30 20:22:36,642 p=9005 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:23:55,187 p=9287 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:23:55,209 p=9287 u=pauloxavier n=ansible | TASK [interfaces : Configura VLANs] *************************************************************************************************************************************************************
+2022-08-30 20:23:55,891 p=9291 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:24:02,698 p=9287 u=pauloxavier n=ansible |  [ERROR]: User interrupted execution
+
+2022-08-30 20:24:08,058 p=9307 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:24:09,565 p=9384 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:24:09,594 p=9384 u=pauloxavier n=ansible | TASK [interfaces : Configura VLANs] *************************************************************************************************************************************************************
+2022-08-30 20:24:10,336 p=9387 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:24:22,626 p=9384 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'name': 'VLAN Visitante', 'vlan_id': 10, 'interface': 'Bridge LAN'})
+2022-08-30 20:24:22,638 p=9384 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:24:22,639 p=9384 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:24:52,591 p=9403 u=pauloxavier n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-08-30 20:24:52,693 p=9403 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:26:41,752 p=9547 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:26:41,770 p=9547 u=pauloxavier n=ansible | TASK [interfaces : Configura endereços IPv4 - Estático] *****************************************************************************************************************************************
+2022-08-30 20:26:41,821 p=9547 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'}) 
+2022-08-30 20:26:41,829 p=9547 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': '02 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:26:41,838 p=9547 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': '03 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:26:41,848 p=9547 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': '04 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:26:41,862 p=9547 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': '05 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:26:42,539 p=9552 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:26:54,986 p=9547 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'Bridge LAN', 'desc': 'Bridge LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'})
+2022-08-30 20:26:55,002 p=9547 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:26:55,003 p=9547 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:27:24,951 p=9569 u=pauloxavier n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-08-30 20:27:25,052 p=9569 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:27:30,853 p=9676 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:27:30,877 p=9676 u=pauloxavier n=ansible | TASK [interfaces : Configura endereços IPv4 - Estático] *****************************************************************************************************************************************
+2022-08-30 20:27:30,944 p=9676 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'}) 
+2022-08-30 20:27:30,947 p=9676 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': '02 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:27:30,963 p=9676 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': '03 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:27:30,970 p=9676 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': '04 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:27:30,978 p=9676 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': '05 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:27:31,649 p=9679 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:27:43,929 p=9676 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'Bridge LAN', 'desc': 'Bridge LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'})
+2022-08-30 20:27:43,940 p=9676 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:27:43,941 p=9676 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:28:09,171 p=9800 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:28:09,197 p=9800 u=pauloxavier n=ansible | TASK [interfaces : Configura endereços IPv4 - Estático] *****************************************************************************************************************************************
+2022-08-30 20:28:09,254 p=9800 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'}) 
+2022-08-30 20:28:09,259 p=9800 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': '02 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:28:09,274 p=9800 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': '03 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:28:09,295 p=9800 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': '04 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:28:09,296 p=9800 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': '05 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:28:09,891 p=9804 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:28:13,897 p=9696 u=pauloxavier n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-08-30 20:28:13,998 p=9696 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:28:51,916 p=9822 u=pauloxavier n=ansible | command timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-08-30 20:28:51,956 p=9800 u=pauloxavier n=ansible | failed: [routeros-01] (item={'routeros_if': 'Bridge LAN', 'desc': 'Bridge LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'}) => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"}, "ansible_loop_var": "item", "changed": false, "item": {"desc": "Bridge LAN", "enabled": true, "ipv4": "10.100.15.253/24", "routeros_if": "Bridge LAN"}, "msg": "command timeout triggered, timeout value is 30 secs.\nSee the timeout setting options in the Network Debug and Troubleshooting Guide."}
+2022-08-30 20:28:51,958 p=9800 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:28:51,959 p=9800 u=pauloxavier n=ansible | routeros-01                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:29:19,366 p=9921 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:29:19,390 p=9921 u=pauloxavier n=ansible | TASK [interfaces : Configura endereços IPv4 - Estático] *****************************************************************************************************************************************
+2022-08-30 20:29:19,445 p=9921 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'}) 
+2022-08-30 20:29:19,451 p=9921 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': '02 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:29:19,464 p=9921 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': '03 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:29:19,470 p=9921 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': '04 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:29:19,483 p=9921 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': '05 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:29:20,086 p=9925 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:29:21,925 p=9822 u=pauloxavier n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-08-30 20:29:22,026 p=9822 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:30:02,108 p=9942 u=pauloxavier n=ansible | command timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-08-30 20:30:02,139 p=9921 u=pauloxavier n=ansible | failed: [routeros-01] (item={'routeros_if': 'Bridge LAN', 'desc': 'Bridge LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'}) => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"}, "ansible_loop_var": "item", "changed": false, "item": {"desc": "Bridge LAN", "enabled": true, "ipv4": "10.100.15.253/24", "routeros_if": "Bridge LAN"}, "msg": "command timeout triggered, timeout value is 30 secs.\nSee the timeout setting options in the Network Debug and Troubleshooting Guide."}
+2022-08-30 20:30:02,141 p=9921 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:30:02,142 p=9921 u=pauloxavier n=ansible | routeros-01                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:30:12,743 p=10103 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:30:12,774 p=10103 u=pauloxavier n=ansible | TASK [interfaces : Configura endereços IPv4 - Estático] *****************************************************************************************************************************************
+2022-08-30 20:30:12,833 p=10103 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'}) 
+2022-08-30 20:30:12,838 p=10103 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': '02 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:30:12,844 p=10103 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': '03 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:30:12,852 p=10103 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': '04 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:30:12,858 p=10103 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': '05 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:30:13,466 p=10106 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:30:25,790 p=10103 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'Bridge LAN', 'desc': 'Bridge LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'})
+2022-08-30 20:30:25,802 p=10103 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:30:25,803 p=10103 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:30:32,110 p=9942 u=pauloxavier n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-08-30 20:30:32,211 p=9942 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:30:36,340 p=10221 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:30:36,376 p=10221 u=pauloxavier n=ansible | TASK [interfaces : Configura endereços IPv4 - Estático] *****************************************************************************************************************************************
+2022-08-30 20:30:36,438 p=10221 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'}) 
+2022-08-30 20:30:36,454 p=10221 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': '02 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:30:36,454 p=10221 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': '03 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:30:36,470 p=10221 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': '04 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:30:36,473 p=10221 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': '05 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:30:37,153 p=10224 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:30:49,429 p=10221 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'Bridge LAN', 'desc': 'Bridge LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'})
+2022-08-30 20:30:49,443 p=10221 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:30:49,443 p=10221 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:30:55,755 p=10123 u=pauloxavier n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-08-30 20:30:55,857 p=10123 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:31:16,611 p=10349 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:31:16,633 p=10349 u=pauloxavier n=ansible | TASK [interfaces : Configura endereços IPv4 - DHCP] *********************************************************************************************************************************************
+2022-08-30 20:31:17,270 p=10356 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:31:19,396 p=10241 u=pauloxavier n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-08-30 20:31:19,498 p=10241 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:31:29,605 p=10349 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'})
+2022-08-30 20:31:29,613 p=10349 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': '02 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:31:29,622 p=10349 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': '03 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:31:29,630 p=10349 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': '04 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:31:29,642 p=10349 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': '05 - REDE LAN', 'enabled': True}) 
+2022-08-30 20:31:29,659 p=10349 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'Bridge LAN', 'desc': 'Bridge LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'}) 
+2022-08-30 20:31:29,678 p=10349 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:31:29,678 p=10349 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:31:59,567 p=10372 u=pauloxavier n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-08-30 20:31:59,669 p=10372 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:32:01,588 p=10478 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:32:01,617 p=10478 u=pauloxavier n=ansible | TASK [interfaces : Limpeza de interfaces com falha] *********************************************************************************************************************************************
+2022-08-30 20:32:02,238 p=10481 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:32:14,536 p=10478 u=pauloxavier n=ansible | ok: [routeros-01]
+2022-08-30 20:32:14,547 p=10478 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:32:14,547 p=10478 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:32:14,647 p=10497 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:33:05,848 p=10607 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:33:05,877 p=10607 u=pauloxavier n=ansible | TASK [snmp : Configura SNMPv2] ******************************************************************************************************************************************************************
+2022-08-30 20:33:06,574 p=10611 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:33:20,009 p=10607 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 20:33:20,021 p=10607 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:33:20,022 p=10607 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:33:20,121 p=10627 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:34:59,837 p=10772 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:34:59,863 p=10772 u=pauloxavier n=ansible | TASK [system : Configura hostname] **************************************************************************************************************************************************************
+2022-08-30 20:35:00,856 p=10780 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:35:13,226 p=10772 u=pauloxavier n=ansible | ok: [routeros-01]
+2022-08-30 20:35:13,237 p=10772 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:35:13,238 p=10772 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:35:13,337 p=10796 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:35:36,658 p=10902 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:35:36,682 p=10902 u=pauloxavier n=ansible | TASK [system : Configura Timezone] **************************************************************************************************************************************************************
+2022-08-30 20:35:37,278 p=10906 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:35:49,635 p=10902 u=pauloxavier n=ansible | ok: [routeros-01]
+2022-08-30 20:35:49,646 p=10902 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:35:49,647 p=10902 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:35:49,746 p=10923 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:36:16,428 p=11046 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:36:16,451 p=11046 u=pauloxavier n=ansible | TASK [system : Configura Cliente NTP] ***********************************************************************************************************************************************************
+2022-08-30 20:36:17,049 p=11051 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:36:29,811 p=11046 u=pauloxavier n=ansible | ok: [routeros-01]
+2022-08-30 20:36:29,823 p=11046 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:36:29,823 p=11046 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:36:29,921 p=11067 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:37:52,683 p=11183 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:37:52,713 p=11183 u=pauloxavier n=ansible | TASK [system : Configura MAC Server] ************************************************************************************************************************************************************
+2022-08-30 20:37:53,420 p=11187 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:38:05,961 p=11183 u=pauloxavier n=ansible | ok: [routeros-01]
+2022-08-30 20:38:05,976 p=11183 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:38:05,976 p=11183 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:38:06,075 p=11203 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:45:53,580 p=11410 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:45:53,612 p=11410 u=pauloxavier n=ansible | TASK [system : Configura Certificado Digital] ***************************************************************************************************************************************************
+2022-08-30 20:45:54,202 p=11414 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:46:19,854 p=11410 u=pauloxavier n=ansible | ok: [routeros-01]
+2022-08-30 20:46:19,869 p=11410 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:46:19,870 p=11410 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:46:19,966 p=11430 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:46:30,570 p=11530 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:46:30,596 p=11530 u=pauloxavier n=ansible | TASK [system : Configura Serviços e portas] *****************************************************************************************************************************************************
+2022-08-30 20:46:31,182 p=11533 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:46:45,278 p=11530 u=pauloxavier n=ansible | ok: [routeros-01]
+2022-08-30 20:46:45,291 p=11530 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:46:45,291 p=11530 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:46:45,390 p=11550 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:49:25,568 p=11723 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:49:25,595 p=11723 u=pauloxavier n=ansible | TASK [firewall : Criar Address Lists] ***********************************************************************************************************************************************************
+2022-08-30 20:49:26,194 p=11727 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:49:30,665 p=11723 u=pauloxavier n=ansible |  [ERROR]: User interrupted execution
+
+2022-08-30 20:49:38,384 p=11743 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:49:50,527 p=11835 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:49:50,554 p=11835 u=pauloxavier n=ansible | TASK [firewall : Criar Address Lists] ***********************************************************************************************************************************************************
+2022-08-30 20:49:51,153 p=11838 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:50:04,097 p=11835 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 20:50:04,109 p=11835 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:50:04,110 p=11835 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:50:04,208 p=11854 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:50:29,320 p=11972 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:50:29,346 p=11972 u=pauloxavier n=ansible | TASK [firewall : Layer7] ************************************************************************************************************************************************************************
+2022-08-30 20:50:29,945 p=11977 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:50:42,535 p=11972 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 20:50:42,548 p=11972 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:50:42,549 p=11972 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:50:42,648 p=11993 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:51:50,174 p=12128 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:51:50,197 p=12128 u=pauloxavier n=ansible | TASK [firewall : Ajuste de Timeout] *************************************************************************************************************************************************************
+2022-08-30 20:51:50,833 p=12132 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:52:03,176 p=12128 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 20:52:03,190 p=12128 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:52:03,190 p=12128 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:52:03,289 p=12148 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:52:34,482 p=12250 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:52:34,513 p=12250 u=pauloxavier n=ansible | TASK [firewall : Ajuste de Timeout] *************************************************************************************************************************************************************
+2022-08-30 20:52:35,113 p=12254 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:52:47,482 p=12250 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 20:52:47,496 p=12250 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:52:47,496 p=12250 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:52:47,594 p=12270 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:52:58,566 p=12370 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:52:58,592 p=12370 u=pauloxavier n=ansible | TASK [firewall : Limpando regras] ***************************************************************************************************************************************************************
+2022-08-30 20:52:59,217 p=12373 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:53:41,327 p=12390 u=pauloxavier n=ansible | command timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-08-30 20:53:41,360 p=12370 u=pauloxavier n=ansible | fatal: [routeros-01]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"}, "changed": false, "msg": "command timeout triggered, timeout value is 30 secs.\nSee the timeout setting options in the Network Debug and Troubleshooting Guide."}
+2022-08-30 20:53:41,362 p=12370 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:53:41,362 p=12370 u=pauloxavier n=ansible | routeros-01                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:53:41,461 p=12390 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 20:56:14,234 p=12524 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 20:56:14,261 p=12524 u=pauloxavier n=ansible | TASK [firewall : Regras de INPUT] ***************************************************************************************************************************************************************
+2022-08-30 20:56:14,848 p=12529 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 20:56:34,744 p=12524 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 20:56:34,756 p=12524 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 20:56:34,757 p=12524 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 20:56:34,856 p=12545 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 21:03:47,076 p=12766 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:03:47,114 p=12766 u=pauloxavier n=ansible | TASK [firewall : Limpando regras] ***************************************************************************************************************************************************************
+2022-08-30 21:03:47,790 p=12770 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 21:04:01,723 p=12766 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:04:01,750 p=12766 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:04:01,751 p=12766 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 21:04:01,847 p=12787 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 21:04:09,282 p=12913 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:04:09,308 p=12913 u=pauloxavier n=ansible | TASK [firewall : Regras de INPUT] ***************************************************************************************************************************************************************
+2022-08-30 21:04:10,072 p=12919 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 21:04:29,945 p=12913 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:04:29,960 p=12913 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:04:29,961 p=12913 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 21:04:30,059 p=12935 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 21:05:11,580 p=13040 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:05:11,600 p=13040 u=pauloxavier n=ansible | TASK [firewall : Regras de FORWARD] *************************************************************************************************************************************************************
+2022-08-30 21:05:12,392 p=13044 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 21:05:25,027 p=13040 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:05:25,040 p=13040 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:05:25,041 p=13040 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 21:05:25,141 p=13060 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 21:09:39,706 p=13208 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:09:39,731 p=13208 u=pauloxavier n=ansible | TASK [firewall : Regras de FORWARD] *************************************************************************************************************************************************************
+2022-08-30 21:09:40,461 p=13213 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 21:09:53,484 p=13208 u=pauloxavier n=ansible | [WARNING]: The value "commands: {'/ip firewall filter add action=accept chain=forward dst-address-list="LAN COREMAS" src-address-list="LAN SIMM" comment="Adicionado via Ansible :': 'REDE SEDE
+>> REDE LAN"'}" (type dict) was converted to "commands: '{\'/ip firewall filter add action=accept chain=forward dst-address-list="LAN COREMAS" src-address-list="LAN SIMM" comment="Adicionado
+via Ansible :\': \'REDE SEDE >> REDE LAN"\'}'" (type string). If this does not look like what you expect, quote the entire value to ensure it does not change.
+
+2022-08-30 21:09:53,485 p=13208 u=pauloxavier n=ansible | [WARNING]: The value "commands: {'/ip firewall filter add action=drop chain=forward in-interface="10 - SIMM VISITANTE" out-interface="Bridge LAN" comment="Adicionado via Ansible :': '10 - SIMM
+VISITANTE TO BRIDGE LAN"'}" (type dict) was converted to "commands: '{\'/ip firewall filter add action=drop chain=forward in-interface="10 - SIMM VISITANTE" out-interface="Bridge LAN"
+comment="Adicionado via Ansible :\': \'10 - SIMM VISITANTE TO BRIDGE LAN"\'}'" (type string). If this does not look like what you expect, quote the entire value to ensure it does not change.
+
+2022-08-30 21:09:53,485 p=13208 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:09:53,496 p=13208 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:09:53,497 p=13208 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 21:09:53,596 p=13232 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 21:11:42,870 p=13351 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:11:42,905 p=13351 u=pauloxavier n=ansible | TASK [firewall : Regras de FORWARD] *************************************************************************************************************************************************************
+2022-08-30 21:11:43,545 p=13357 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 21:11:55,982 p=13351 u=pauloxavier n=ansible | [WARNING]: The value "commands: {'/ip firewall filter add action=drop chain=forward in-interface="10 - VLAN Visitante" out-interface="Bridge LAN" comment="Adicionado via Ansible :': '10 - SIMM
+VISITANTE TO BRIDGE LAN"'}" (type dict) was converted to "commands: '{\'/ip firewall filter add action=drop chain=forward in-interface="10 - VLAN Visitante" out-interface="Bridge LAN"
+comment="Adicionado via Ansible :\': \'10 - SIMM VISITANTE TO BRIDGE LAN"\'}'" (type string). If this does not look like what you expect, quote the entire value to ensure it does not change.
+
+2022-08-30 21:11:55,984 p=13351 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:11:56,002 p=13351 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:11:56,002 p=13351 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 21:11:56,102 p=13373 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 21:12:29,073 p=13475 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:12:29,094 p=13475 u=pauloxavier n=ansible | TASK [firewall : Regras de FORWARD] *************************************************************************************************************************************************************
+2022-08-30 21:12:29,849 p=13481 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 21:12:42,416 p=13475 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:12:42,426 p=13475 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:12:42,426 p=13475 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 21:12:42,526 p=13497 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 21:12:59,377 p=13600 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:12:59,402 p=13600 u=pauloxavier n=ansible | TASK [firewall : Regras de FORWARD] *************************************************************************************************************************************************************
+2022-08-30 21:13:00,108 p=13604 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 21:13:12,872 p=13600 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:13:12,886 p=13600 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:13:12,887 p=13600 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 21:13:12,983 p=13620 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 21:13:41,501 p=13734 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:13:41,529 p=13734 u=pauloxavier n=ansible | TASK [firewall : Limpando regras] ***************************************************************************************************************************************************************
+2022-08-30 21:13:42,234 p=13739 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 21:13:57,426 p=13734 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:13:57,440 p=13734 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:13:57,440 p=13734 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 21:13:57,539 p=13755 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 21:14:16,183 p=13867 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:14:16,210 p=13867 u=pauloxavier n=ansible | TASK [firewall : Regras de FORWARD] *************************************************************************************************************************************************************
+2022-08-30 21:14:16,864 p=13871 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 21:14:29,767 p=13867 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:14:29,778 p=13867 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:14:29,779 p=13867 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 21:14:29,877 p=13887 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 21:15:07,640 p=13999 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:15:07,663 p=13999 u=pauloxavier n=ansible | TASK [firewall : Limpando regras] ***************************************************************************************************************************************************************
+2022-08-30 21:15:08,467 p=14003 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 21:15:21,114 p=13999 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:15:21,124 p=13999 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:15:21,125 p=13999 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 21:15:21,224 p=14019 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 21:15:36,438 p=14117 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:15:36,457 p=14117 u=pauloxavier n=ansible | TASK [firewall : Regras de FORWARD] *************************************************************************************************************************************************************
+2022-08-30 21:15:37,162 p=14120 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 21:15:50,024 p=14117 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:15:50,035 p=14117 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:15:50,035 p=14117 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 21:15:50,135 p=14136 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 21:16:31,868 p=14250 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:16:31,891 p=14250 u=pauloxavier n=ansible | TASK [firewall : Limpando regras] ***************************************************************************************************************************************************************
+2022-08-30 21:16:32,669 p=14257 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 21:16:45,330 p=14250 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:16:45,341 p=14250 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:16:45,341 p=14250 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 21:16:45,440 p=14273 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 21:16:51,495 p=14359 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:16:51,521 p=14359 u=pauloxavier n=ansible | TASK [firewall : Regras de FORWARD] *************************************************************************************************************************************************************
+2022-08-30 21:16:52,273 p=14362 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 21:17:05,057 p=14359 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:17:05,084 p=14359 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:17:05,084 p=14359 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 21:17:05,181 p=14379 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 21:17:13,862 p=14487 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:17:13,895 p=14487 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:17:28,883 p=14525 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:17:28,907 p=14525 u=pauloxavier n=ansible | TASK [firewall : Regras de INPUT] ***************************************************************************************************************************************************************
+2022-08-30 21:17:29,578 p=14531 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 21:17:49,696 p=14525 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:17:49,707 p=14525 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:17:49,708 p=14525 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 21:17:49,807 p=14548 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 21:21:09,479 p=14701 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:21:09,497 p=14701 u=pauloxavier n=ansible | TASK [firewall : Desabilita porta de serviço SIP] ***********************************************************************************************************************************************
+2022-08-30 21:21:10,317 p=14705 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 21:21:24,140 p=14701 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:21:24,150 p=14701 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:21:24,151 p=14701 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 21:21:24,250 p=14721 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 21:22:15,067 p=14834 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:22:15,088 p=14834 u=pauloxavier n=ansible | TASK [firewall : Desabilita porta de serviço] ***************************************************************************************************************************************************
+2022-08-30 21:22:15,878 p=14838 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 21:22:30,777 p=14834 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:22:30,789 p=14834 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:22:30,789 p=14834 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 21:22:30,889 p=14854 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 21:25:49,133 p=15120 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:25:49,159 p=15120 u=pauloxavier n=ansible | TASK [system : Configura hostname] **************************************************************************************************************************************************************
+2022-08-30 21:25:49,782 p=15124 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 21:26:14,981 p=15120 u=pauloxavier n=ansible | ok: [routeros-01]
+2022-08-30 21:26:14,987 p=15120 u=pauloxavier n=ansible | TASK [system : Configura Timezone] **************************************************************************************************************************************************************
+2022-08-30 21:26:16,800 p=15120 u=pauloxavier n=ansible | ok: [routeros-01]
+2022-08-30 21:26:16,806 p=15120 u=pauloxavier n=ansible | TASK [system : Configura Cliente NTP] ***********************************************************************************************************************************************************
+2022-08-30 21:26:19,008 p=15120 u=pauloxavier n=ansible | ok: [routeros-01]
+2022-08-30 21:26:19,014 p=15120 u=pauloxavier n=ansible | TASK [system : Configura MAC Server] ************************************************************************************************************************************************************
+2022-08-30 21:26:20,964 p=15120 u=pauloxavier n=ansible | ok: [routeros-01]
+2022-08-30 21:26:20,971 p=15120 u=pauloxavier n=ansible | TASK [system : Configura Certificado Digital] ***************************************************************************************************************************************************
+2022-08-30 21:26:29,927 p=15120 u=pauloxavier n=ansible | ok: [routeros-01]
+2022-08-30 21:26:29,933 p=15120 u=pauloxavier n=ansible | TASK [system : Configura Serviços e portas] *****************************************************************************************************************************************************
+2022-08-30 21:26:33,308 p=15120 u=pauloxavier n=ansible | ok: [routeros-01]
+2022-08-30 21:26:33,314 p=15120 u=pauloxavier n=ansible | TASK [system : Habilita DDNS] *******************************************************************************************************************************************************************
+2022-08-30 21:26:35,020 p=15120 u=pauloxavier n=ansible | ok: [routeros-01]
+2022-08-30 21:26:35,026 p=15120 u=pauloxavier n=ansible | TASK [interfaces : Criar interface List WAN] ****************************************************************************************************************************************************
+2022-08-30 21:26:37,257 p=15120 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:26:37,264 p=15120 u=pauloxavier n=ansible | TASK [interfaces : Criar interface List LAN] ****************************************************************************************************************************************************
+2022-08-30 21:26:39,986 p=15120 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:26:39,991 p=15120 u=pauloxavier n=ansible | TASK [interfaces : Criando Bridge LAN] **********************************************************************************************************************************************************
+2022-08-30 21:26:42,024 p=15120 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:26:42,030 p=15120 u=pauloxavier n=ansible | TASK [interfaces : Adicionando interfaces à Bridge LAN] *****************************************************************************************************************************************
+2022-08-30 21:26:43,917 p=15120 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:26:43,923 p=15120 u=pauloxavier n=ansible | TASK [interfaces : Configura VLANs] *************************************************************************************************************************************************************
+2022-08-30 21:26:49,241 p=15120 u=pauloxavier n=ansible | changed: [routeros-01] => (item={'name': 'VLAN VISITANTE', 'vlan_id': 10, 'interface': 'Bridge LAN'})
+2022-08-30 21:26:49,248 p=15120 u=pauloxavier n=ansible | TASK [interfaces : Configura interfaces] ********************************************************************************************************************************************************
+2022-08-30 21:26:51,012 p=15120 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'})
+2022-08-30 21:26:52,297 p=15120 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': '02 - REDE LAN', 'enabled': True})
+2022-08-30 21:26:53,483 p=15120 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': '03 - REDE LAN', 'enabled': True})
+2022-08-30 21:26:54,688 p=15120 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': '04 - REDE LAN', 'enabled': True})
+2022-08-30 21:26:55,881 p=15120 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': '05 - REDE LAN', 'enabled': True})
+2022-08-30 21:26:57,103 p=15120 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'Bridge LAN', 'desc': 'Bridge LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'})
+2022-08-30 21:26:57,109 p=15120 u=pauloxavier n=ansible | TASK [interfaces : Configura endereços IPv4 - Estático] *****************************************************************************************************************************************
+2022-08-30 21:26:57,189 p=15120 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'}) 
+2022-08-30 21:26:57,190 p=15120 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': '02 - REDE LAN', 'enabled': True}) 
+2022-08-30 21:26:57,199 p=15120 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': '03 - REDE LAN', 'enabled': True}) 
+2022-08-30 21:26:57,205 p=15120 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': '04 - REDE LAN', 'enabled': True}) 
+2022-08-30 21:26:57,213 p=15120 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': '05 - REDE LAN', 'enabled': True}) 
+2022-08-30 21:26:58,957 p=15120 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'Bridge LAN', 'desc': 'Bridge LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'})
+2022-08-30 21:26:58,964 p=15120 u=pauloxavier n=ansible | TASK [interfaces : Configura endereços IPv4 - DHCP] *********************************************************************************************************************************************
+2022-08-30 21:27:00,835 p=15120 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'routeros_if': 'ether1', 'desc': '01 - LINK INTERNET', 'enabled': True, 'ipv4': 'dhcp'})
+2022-08-30 21:27:00,842 p=15120 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether2', 'desc': '02 - REDE LAN', 'enabled': True}) 
+2022-08-30 21:27:00,852 p=15120 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether3', 'desc': '03 - REDE LAN', 'enabled': True}) 
+2022-08-30 21:27:00,866 p=15120 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether4', 'desc': '04 - REDE LAN', 'enabled': True}) 
+2022-08-30 21:27:00,870 p=15120 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'ether5', 'desc': '05 - REDE LAN', 'enabled': True}) 
+2022-08-30 21:27:00,882 p=15120 u=pauloxavier n=ansible | skipping: [routeros-01] => (item={'routeros_if': 'Bridge LAN', 'desc': 'Bridge LAN', 'enabled': True, 'ipv4': '10.100.15.253/24'}) 
+2022-08-30 21:27:00,888 p=15120 u=pauloxavier n=ansible | TASK [interfaces : Limpeza de interfaces com falha] *********************************************************************************************************************************************
+2022-08-30 21:27:02,859 p=15120 u=pauloxavier n=ansible | ok: [routeros-01]
+2022-08-30 21:27:02,865 p=15120 u=pauloxavier n=ansible | TASK [firewall : Criar Address Lists] ***********************************************************************************************************************************************************
+2022-08-30 21:27:05,549 p=15120 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:27:05,556 p=15120 u=pauloxavier n=ansible | TASK [firewall : Layer7] ************************************************************************************************************************************************************************
+2022-08-30 21:27:07,711 p=15120 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:27:07,717 p=15120 u=pauloxavier n=ansible | TASK [firewall : Ajuste de Timeout] *************************************************************************************************************************************************************
+2022-08-30 21:27:09,730 p=15120 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:27:09,736 p=15120 u=pauloxavier n=ansible | TASK [firewall : Limpando regras] ***************************************************************************************************************************************************************
+2022-08-30 21:27:11,746 p=15120 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:27:11,752 p=15120 u=pauloxavier n=ansible | TASK [firewall : Regras de INPUT] ***************************************************************************************************************************************************************
+2022-08-30 21:27:21,729 p=15120 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:27:21,735 p=15120 u=pauloxavier n=ansible | TASK [firewall : Regras de FORWARD] *************************************************************************************************************************************************************
+2022-08-30 21:27:23,925 p=15120 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:27:23,931 p=15120 u=pauloxavier n=ansible | TASK [firewall : Regras de OUTPUT] **************************************************************************************************************************************************************
+2022-08-30 21:27:25,870 p=15120 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:27:25,876 p=15120 u=pauloxavier n=ansible | TASK [firewall : Regras de NAT] *****************************************************************************************************************************************************************
+2022-08-30 21:27:28,334 p=15120 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:27:28,340 p=15120 u=pauloxavier n=ansible | TASK [firewall : Desabilita porta de serviço] ***************************************************************************************************************************************************
+2022-08-30 21:27:33,963 p=15120 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:27:33,971 p=15120 u=pauloxavier n=ansible | TASK [snmp : Configura SNMPv2] ******************************************************************************************************************************************************************
+2022-08-30 21:27:37,509 p=15120 u=pauloxavier n=ansible | changed: [routeros-01]
+2022-08-30 21:27:37,520 p=15120 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:27:37,521 p=15120 u=pauloxavier n=ansible | routeros-01                : ok=26   changed=15   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 21:27:37,620 p=15140 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 21:39:59,715 p=16489 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:39:59,762 p=16489 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:41:41,550 p=16563 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:41:41,579 p=16563 u=pauloxavier n=ansible | TASK [interfaces : Adiciona DHCP Server - Rede LAN] *********************************************************************************************************************************************
+2022-08-30 21:41:42,237 p=16568 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 21:41:56,219 p=16563 u=pauloxavier n=ansible | ok: [routeros-01]
+2022-08-30 21:41:56,229 p=16563 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:41:56,230 p=16563 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 21:41:56,329 p=16587 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 21:50:25,281 p=16798 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:50:25,305 p=16798 u=pauloxavier n=ansible | TASK [interfaces : Configura VLANs IPv4 - Estático] *********************************************************************************************************************************************
+2022-08-30 21:50:25,361 p=16798 u=pauloxavier n=ansible | fatal: [routeros-01]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'dict object' has no attribute 'desc'\n\nThe error appears to be in '/home/pauloxavier/GIT/Ansible/LAB/RouterOS/roles/interfaces/tasks/main.yml': line 51, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: Configura VLANs IPv4 - Estático\n  ^ here\n"}
+2022-08-30 21:50:25,362 p=16798 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:50:25,362 p=16798 u=pauloxavier n=ansible | routeros-01                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2022-08-30 21:54:33,303 p=16885 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:54:33,330 p=16885 u=pauloxavier n=ansible | TASK [interfaces : Configura VLANs IPv4 - Estatico] *********************************************************************************************************************************************
+2022-08-30 21:54:33,382 p=16885 u=pauloxavier n=ansible | fatal: [routeros-01]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'dict object' has no attribute 'desc'\n\nThe error appears to be in '/home/pauloxavier/GIT/Ansible/LAB/RouterOS/roles/interfaces/tasks/main.yml': line 51, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: Configura VLANs IPv4 - Estatico\n  ^ here\n"}
+2022-08-30 21:54:33,385 p=16885 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:54:33,386 p=16885 u=pauloxavier n=ansible | routeros-01                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2022-08-30 21:55:52,337 p=16937 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:55:52,365 p=16937 u=pauloxavier n=ansible | TASK [interfaces : Configura VLANs IPv4 - Estático] *********************************************************************************************************************************************
+2022-08-30 21:55:53,057 p=16941 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 21:56:05,513 p=16937 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'name': 'VLAN VISITANTE', 'vlan_id': 10, 'interface': 'Bridge LAN', 'ipv4': '172.16.10.1/24', 'desc': '10 - VLAN VISITANTE'})
+2022-08-30 21:56:05,531 p=16937 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:56:05,531 p=16937 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 21:56:35,463 p=16957 u=pauloxavier n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-08-30 21:56:35,565 p=16957 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 21:56:50,060 p=17076 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 21:56:50,105 p=17076 u=pauloxavier n=ansible | TASK [interfaces : Configura VLANs IPv4 - Estático] *********************************************************************************************************************************************
+2022-08-30 21:56:50,952 p=17089 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 21:57:03,362 p=17076 u=pauloxavier n=ansible | ok: [routeros-01] => (item={'name': 'VLAN VISITANTE', 'vlan_id': 10, 'interface': 'Bridge LAN', 'ipv4': '172.16.10.1/24', 'desc': 'VLAN VISITANTE'})
+2022-08-30 21:57:03,375 p=17076 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 21:57:03,376 p=17076 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 21:57:33,316 p=17093 u=pauloxavier n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-08-30 21:57:33,418 p=17093 u=pauloxavier n=ansible | shutdown complete
+2022-08-30 22:05:56,239 p=17394 u=pauloxavier n=ansible | PLAY [mikrotik] *********************************************************************************************************************************************************************************
+2022-08-30 22:05:56,264 p=17394 u=pauloxavier n=ansible | TASK [system : Habilita DNS] ********************************************************************************************************************************************************************
+2022-08-30 22:05:56,948 p=17398 u=pauloxavier n=ansible | network_os is set to routeros
+2022-08-30 22:06:09,649 p=17394 u=pauloxavier n=ansible | ok: [routeros-01]
+2022-08-30 22:06:09,660 p=17394 u=pauloxavier n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2022-08-30 22:06:09,660 p=17394 u=pauloxavier n=ansible | routeros-01                : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-30 22:06:09,760 p=17402 u=pauloxavier n=ansible | shutdown complete

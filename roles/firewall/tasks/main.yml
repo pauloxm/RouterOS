@@ -1,0 +1,105 @@
+---
+# tasks file for firewall
+- name: "Criar Address Lists"
+  community.routeros.command: 
+    commands:
+      - /ip firewall address-list add address=52.168.64.168 list=Zabbix comment="Adicionado via Ansible"
+      - /ip firewall address-list add address=telemetria.drpc.cloud list=Zabbix comment="Adicionado via Ansible"
+      - /ip firewall address-list add address=192.168.100.0/23 list="LAN SIMM" comment="Adicionado via Ansible"
+      - /ip firewall address-list add address=191.34.165.138 list=Simm comment="Adicionado via Ansible"
+  tags:
+    - acl1
+    - acl_ipv4
+
+- name: "Layer7"
+  community.routeros.command: 
+    commands:
+      - /ip firewall layer7-protocol add name=Youtube regexp="^(.*)(youtube)(.*)\$" comment="Adicionado via Ansible"
+      - /ip firewall layer7-protocol add name=Facebook regexp="^(.*)(facebook)(.*)\$" comment="Adicionado via Ansible"
+  tags:
+    - acl2
+    - acl_ipv4
+
+- name: "Ajuste de Timeout"
+  community.routeros.command: 
+    commands:
+      - /ip firewall connection tracking set tcp-established-timeout=30m
+  tags:
+    - acl3
+    - acl_ipv4
+
+- name: "Limpando regras"
+  community.routeros.command: 
+    commands:
+      - /ip firewall filter remove [find where comment~""]
+  tags:
+    - acl4
+    - acl_ipv4
+
+- name: "Regras de INPUT"
+  community.routeros.command: 
+    commands:
+      - /ip firewall filter add action=accept chain=input connection-state=established,related,untracked comment="Adicionado via Ansible"
+      - /ip firewall filter add action=drop chain=input connection-state=invalid comment="Adicionado via Ansible"
+      - /ip firewall filter add action=add-src-to-address-list address-list=port-scanners address-list-timeout=4w2d chain=input dst-port=3389,21-25 in-interface-list=WAN protocol=tcp comment="Adicionado via Ansible"
+      - /ip firewall filter add action=add-src-to-address-list address-list=Ataque_SynFlood address-list-timeout=1w chain=input connection-limit=30,32 in-interface-list=WAN protocol=tcp tcp-flags=syn comment="Adicionado via Ansible"
+      - /ip firewall filter add action=tarpit chain=input protocol=tcp src-address-list=Ataque_SynFlood comment="Adicionado via Ansible"
+      - /ip firewall filter add action=add-src-to-address-list address-list=PORTA1 address-list-timeout=3s chain=input dst-port=1979 in-interface-list=WAN protocol=tcp comment="Adicionado via Ansible"
+      - /ip firewall filter add action=add-src-to-address-list address-list=PORTA2 address-list-timeout=3s chain=input dst-port=52003 in-interface-list=WAN protocol=tcp src-address-list=PORTA1 comment="Adicionado via Ansible"
+      - /ip firewall filter add action=add-src-to-address-list address-list=ACESSO-LIBERADO address-list-timeout=4w2d1h chain=input dst-port=4070 in-interface-list=WAN protocol=tcp src-address-list=PORTA2 comment="Adicionado via Ansible"
+      - /ip firewall filter add action=accept chain=input src-address-list=ACESSO-LIBERADO comment="Adicionado via Ansible"
+      - /ip firewall filter add action=add-src-to-address-list address-list=port-scanners address-list-timeout=2w chain=input in-interface-list=WAN protocol=tcp psd=21,3s,3,1 comment="Adicionado via Ansible"
+      - /ip firewall filter add action=add-src-to-address-list address-list=port-scanners address-list-timeout=4w2d chain=input in-interface-list=WAN protocol=udp psd=21,3s,3,1 comment="Adicionado via Ansible"
+      - /ip firewall filter add action=jump chain=input in-interface-list=WAN jump-target=ICMP protocol=icmp comment="Adicionado via Ansible"
+      - /ip firewall filter add action=accept chain=input dst-port=1701,500,4500 in-interface-list=WAN protocol=udp comment="Adicionado via Ansible"
+      - /ip firewall filter add action=accept chain=input in-interface-list=WAN protocol=ipsec-esp comment="Adicionado via Ansible"
+      - /ip firewall filter add action=accept chain=input dst-port=2200,8443,8889 protocol=tcp src-address-list=Simm comment="Adicionado via Ansible"
+      - /ip firewall filter add action=accept chain=input dst-port=68 in-interface-list=WAN protocol=udp comment="Adicionado via Ansible"
+      - /ip firewall filter add action=drop chain=input in-interface-list=WAN comment="Adicionado via Ansible"
+      - /ip firewall filter add action=accept chain=ICMP icmp-options=8:0 limit=100,5:packet protocol=icmp comment="Adicionado via Ansible"
+      - /ip firewall filter add action=accept chain=ICMP icmp-options=0:0 limit=100,5:packet protocol=icmp comment="Adicionado via Ansible"
+      - /ip firewall filter add action=accept chain=ICMP icmp-options=11:0 limit=100,5:packet protocol=icmp comment="Adicionado via Ansible"
+      - /ip firewall filter add action=accept chain=ICMP icmp-options=3:0-1 limit=100,5:packet protocol=icmp comment="Adicionado via Ansible"
+      - /ip firewall filter add action=accept chain=ICMP icmp-options=3:4 limit=100,5:packet protocol=icmp comment="Adicionado via Ansible"
+      - /ip firewall filter add action=drop chain=ICMP protocol=icmp comment="Adicionado via Ansible"
+  tags:
+    - acl5
+    - acl_ipv4
+
+- name: "Regras de FORWARD"
+  community.routeros.command: 
+    commands:
+      - /ip firewall filter add action=accept chain=forward dst-address-list="REDE LAN" src-address-list="LAN SIMM" comment="Adicionado via Ansible - REDE SEDE >> REDE LAN"
+      - /ip firewall filter add action=drop chain=forward in-interface="10 - VLAN Visitante" out-interface="Bridge LAN" comment="Adicionado via Ansible - VLAN VISITANTE >> BRIDGE LAN"
+  tags:
+    - acl6
+    - acl_ipv4
+
+- name: "Regras de OUTPUT"
+  community.routeros.command: 
+    commands:
+      - /ip firewall filter add action=accept chain=output comment="Adicionado via Ansible"
+  tags:
+    - acl6
+    - acl_ipv4
+
+- name: "Regras de NAT"
+  community.routeros.command: 
+    commands:
+      - /ip firewall nat add action=masquerade chain=srcnat out-interface-list=WAN comment="Adicionado via Ansible - MASQUERADE DO ACESSO INTERNET"
+      - /ip firewall raw add action=drop chain=prerouting in-interface-list=WAN src-address-list=port-scanners comment="Adicionado via Ansible - DROP DE IP'S QUE FAZEM PORTSCAN"
+  tags:
+    - acl
+    - acl_ipv4
+
+- name: "Desabilita porta de serviço"
+  community.routeros.command: 
+    commands:
+      - /ip firewall service-port set sip disabled=yes
+      - /ip firewall service-port set pptp disabled=yes
+      - /ip firewall service-port set tftp disabled=yes
+      - /ip firewall service-port set ftp disabled=yes
+      - /ip firewall service-port set irc disabled=yes
+  tags:
+    - acl9
+    - acl_ipv4

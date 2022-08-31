@@ -1,0 +1,13 @@
+---
+# tasks file for snmp
+- name: Configura SNMPv2
+  community.routeros.command:
+    commands:
+      - /snmp community add name="{{ snmp['snmp_community'] }}"
+      - /snmp set trap-community="{{ snmp['snmp_community'] }}"
+      - /snmp set trap-version=2
+      - /snmp set enabled=yes
+      - /snmp set contact="{{ snmp['contact'] }}" 
+      - /snmp set location="{{ snmp['location'] }}"
+  tags:
+    - snmp

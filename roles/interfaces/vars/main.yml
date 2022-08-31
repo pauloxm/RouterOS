@@ -1,0 +1,5 @@
+---
+# vars file for interfaces
+ansible_network_os: routeros
+ansible_user: admin
+ansible_ssh_pass: admin

@@ -1,0 +1,121 @@
+---
+# tasks file for interfaces
+- name: "Criar interface List WAN"
+  community.routeros.command: 
+    commands:
+      - /interface list add name=WAN comment="Adicionado via Ansible"
+      - /interface list member add interface="ether1" list=WAN comment="Adicionado via Ansible"
+  tags:
+    - interfaces
+    - bridge
+
+- name: "Criar interface List LAN"
+  community.routeros.command: 
+    commands:
+      - /interface list add name=LAN comment="Adicionado via Ansible"
+      - /interface list member add interface="ether2" list=LAN comment="Adicionado via Ansible"
+      - /interface list member add interface="ether3" list=LAN comment="Adicionado via Ansible"
+      - /interface list member add interface="ether4" list=LAN comment="Adicionado via Ansible"
+      - /interface list member add interface="ether5" list=LAN comment="Adicionado via Ansible"
+  tags:
+    - interfaces
+    - bridge
+
+- name: Criando Bridge LAN
+  community.routeros.command: 
+    commands:
+      - /interface bridge add name="Bridge LAN" comment="Adicionado via Ansible"
+  tags:
+    - interfaces
+    - bridge
+
+- name: Adicionando interfaces à Bridge LAN
+  community.routeros.command: 
+    commands:
+      - /interface bridge port add interface="LAN" bridge="Bridge LAN" 
+  tags:
+    - interfaces
+    - bridge
+
+- name: Configura VLANs 
+  community.routeros.command:
+    commands:
+      - /interface vlan add name="{{ item.vlan_id }} - {{ item.name }}" interface="{{ item.interface }}" comment="Adicionado via Ansible" vlan-id="{{ item.vlan_id }}"
+  when:
+    - vlans is defined
+  loop: "{{ vlans }}"
+  tags:
+    - interfaces
+    - vlans
+
+- name: Configura VLANs IPv4 - Estático
+  routeros_command:
+    commands:
+      - /ip address add interface="{{ item.vlan_id }} - {{ item.name }}" address="{{ item.ipv4 }}" comment="{{ item.desc }} - Adicionado via Ansible"
+  when:
+    - item.ipv4 is defined
+    - '"dhcp" not in item.ipv4'
+  loop: "{{ vlans }}"
+  tags:
+    - interfaces11
+    - ipv4
+
+- name: Configura interfaces
+  routeros_command:
+    commands:
+      - /interface set name="{{ item.desc }}" comment="Adicionado via Ansible" [find where default-name="{{ item.routeros_if }}"]
+  loop: "{{ interfaces }}"
+  tags:
+    - interfaces
+
+- name: Configura endereços IPv4 - Estático
+  routeros_command:
+    commands:
+      - /ip address add interface="{{ item.desc }}" address="{{ item.ipv4 }}" comment="{{ item.desc }} - Adicionado via Ansible"
+  when:
+    - item.ipv4 is defined
+    - '"dhcp" not in item.ipv4'
+  loop: "{{ interfaces }}"
+  tags:
+    - interfaces
+    - ipv4
+
+- name: Configura endereços IPv4 - Cliente DHCP
+  routeros_command:
+    commands:
+      - /ip dhcp-client add interface="{{ item.desc }}" disabled=no comment="Adicionado via Ansible - {{ item.desc }}"
+  when:
+    - item.ipv4 is defined
+    - '"dhcp" in item.ipv4'
+  loop: "{{ interfaces }}"
+  tags:
+    - interfaces
+    - ipv4
+
+- name: Limpeza de interfaces com falha
+  routeros_command:
+    commands:
+      - /ip address remove [find where invalid]
+  tags:
+    - interfaces
+    - ipv4
+
+- name: Adiciona DHCP Server - Rede LAN
+  routeros_command:
+    commands:
+      - /ip pool add name="POOL LAN" ranges="10.100.1.50-10.100.1.200" comment="Adicionado via Ansible"
+      - /ip dhcp-server network add address=10.100.1.0/24 gateway=10.100.1.253 dns-server=10.100.1.253 comment="Adicionado via Ansible - REDE LAN"
+      - /ip dhcp-server add name="DHCP SERVER LAN" interface="Bridge LAN" lease-time=1h address-pool="POOL LAN" add-arp=yes
+  tags:
+    - interfaces
+    - ipv4
+
+- name: Adiciona DHCP Server - Rede LAN
+  routeros_command:
+    commands:
+      - /ip pool add name="POOL VISITANTE" ranges="172.16.10.50-172.16.10.200" comment="Adicionado via Ansible"
+      - /ip dhcp-server network add address=172.16.10.0/24 gateway=172.16.10.1 dns-server=8.8.8.8,8.8.4.4,1.1.1.1 comment="Adicionado via Ansible - REDE VISITANTE"
+      - /ip dhcp-server add name="DHCP SERVER VISITANTE" interface="10 - VLAN VISITANTE" lease-time=30m address-pool="POOL VISITANTE" add-arp=yes
+  tags:
+    - interfaces
+    - ipv4

@@ -1,0 +1,4 @@
+snmp:
+  location: "Nome da Empresa"
+  contact: "Paulo Xavier"
+  snmp_community: comunidade

@@ -1,0 +1,69 @@
+---
+# tasks file for system
+- name: Configura hostname
+  routeros_command:
+    commands:
+      - /system identity set name="{{ inventory_hostname }}"
+  tags:
+    - system
+
+- name: Configura Timezone
+  routeros_command:
+    commands:
+      - /system clock set time-zone-autodetect=no time-zone-name=America/Fortaleza
+  tags:
+    - system
+
+- name: Configura Cliente NTP
+  routeros_command:
+    commands:
+      - system ntp client set enabled=yes
+      - /system ntp client servers add address=200.160.7.186
+      - /system ntp client servers add address=201.49.148.135
+  tags:
+    - system
+
+- name: Configura MAC Server
+  routeros_command:
+    commands:
+      - /tool mac-server set allowed-interface-list=LAN
+      - /tool mac-server mac-winbox set allowed-interface-list=LAN
+  tags:
+    - system
+
+- name: Configura Certificado Digital
+  routeros_command:
+    commands:
+      - certificate add name="CA Certificate" country=BR state=RN locality=Natal organization=SIMM unit=TI common-name=NOME days-valid=3650 key-usage=crl-sign,key-agreement,key-cert-sign
+      - certificate sign "CA Certificate"
+  tags:
+    - system
+
+- name: Configura Serviços e portas
+  routeros_command:
+    commands:
+      - /ip service set telnet disabled=yes
+      - /ip service set ftp disabled=yes
+      - /ip service set www disabled=yes port=8889
+      - /ip service set ssh port=2200
+      - /ip service set www-ssl certificate="CA Certificate" disabled=no port=8443
+      - /ip service set api disabled=yes
+      - /ip service set winbox port=8889
+      - /ip service set api-ssl disabled=yes
+  tags:
+    - system
+
+- name: Habilita DDNS
+  routeros_command:
+    commands:
+      - /ip cloud set ddns-enabled=yes
+  tags:
+    - system
+
+- name: Habilita DNS
+  routeros_command:
+    commands:
+      - /ip dns set servers=8.8.8.8,8.8.4.4,1.1.1.1 allow-remote-requests=yes
+      - /ip dns static add name=unifi address=13.82.66.20 comment="Adicionado via Ansible"
+  tags:
+    - system

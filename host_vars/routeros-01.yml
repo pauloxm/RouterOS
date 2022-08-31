@@ -1,0 +1,29 @@
+router_id: 192.0.2.104
+rtr_role: edge
+vlans:
+  - name: VLAN VISITANTE
+    vlan_id: 10
+    interface: Bridge LAN
+    ipv4: "172.16.10.1/24"
+    desc: "VLAN VISITANTE"
+interfaces:
+  - routeros_if: "ether1"
+    desc: "01 - LINK INTERNET"
+    enabled: true
+    ipv4: "dhcp"
+  - routeros_if: "ether2"
+    desc: "02 - REDE LAN"
+    enabled: true
+  - routeros_if: "ether3"
+    desc: "03 - REDE LAN"
+    enabled: true
+  - routeros_if: "ether4"
+    desc: "04 - REDE LAN"
+    enabled: true
+  - routeros_if: "ether5"
+    desc: "05 - REDE LAN"
+    enabled: true
+  - routeros_if: "Bridge LAN"
+    desc: "Bridge LAN"
+    enabled: true
+    ipv4: "10.100.15.253/24"
